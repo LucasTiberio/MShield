@@ -1,0 +1,130 @@
+.payment-method {
+  margin: 40px 20px;
+  background-color: white;
+  padding: 10px 20px;
+  transition: all 0.5s linear;
+
+  
+  &.separated {
+    width: 68%;
+    margin: 40px 0px 20px;
+    float: right;
+  }
+
+  table {
+    border-collapse: collapse;
+    position: relative;
+    width: 100%;
+    thead td {
+      padding: 5px 15px;
+      font-size: 14px;
+      
+      font-weight: bold;
+      text-transform: uppercase;
+      
+      color: #666;
+    }
+
+    tbody tr {
+      &:nth-child(odd) {
+        background-color: #fafbfd;
+      }
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+
+      cursor: pointer;
+      
+      td {
+        &:last-child {
+          text-align: right;
+        }
+
+        padding: 5px 15px;
+        font-size: 18px;
+
+        color: #888;
+
+        .success, .failure {
+          font-size: 14px;
+          padding: 2px 10px;
+          border-radius: 3px;
+          
+          font-weight: bold;
+        }
+
+        .success {
+          background: #beffdb57;
+          color: #84dab3;
+        }
+
+        .failure {
+          background: #ffccd08a;
+          color: #db9d9d;
+        }
+      }
+    }
+  }
+
+  .table-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+
+    span {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        margin: 0 10px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+}
+
+.costumer-info {
+  float: left;
+  width: 0px;
+  opacity: 0;
+  transition: all 0.5s linear, opacity 0.8s linear;
+
+  &.separated {
+    display: block;
+    width: 30%;
+    padding-left: 100px;
+    opacity: 1;
+  }
+
+  > div {
+    background-color: white;
+    border: 1px solid #ccc;
+
+    .map img {
+      width: 100%;
+    }
+
+    .info {
+      padding: 15px 40px;
+      span {
+        display: block;
+        color: #333;
+
+        &.name {
+          font-size: 26px;
+        }
+
+        &.description {
+          color: #aaa;
+        }
+
+        &.mail {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}
