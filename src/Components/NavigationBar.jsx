@@ -4,57 +4,47 @@ import '../scss/components/navbar.scss'
 
 const NavigationBar = props => {
 
+  const hasPath = path => window.location.pathname.includes(path);
+
   const NavItems = [
     {
       title: "Overview",
       quantity: 0,
       submenu: false,
-      active: false
-    },
-    {
-      title: "Orders",
-      quantity: 2,
-      submenu: false,
-      active: false
+      active: hasPath('overview')
     },
     {
       title: "Payment Methods",
       quantity: 10,
       submenu: false,
-      active: true
+      active: hasPath('payment-methods')
     },
     {
       title: "Chargebacks",
       quantity: 1,
       submenu: false,
-      active: false
+      active: hasPath('chargebacks')
     },
     {
       title: "Locations",
       quantity: 15,
       submenu: false,
-      active: false
-    },
-    {
-      title: "Devices",
-      quantity: 2,
-      submenu: true,
-      active: false
+      active: hasPath('locations')
     },
     {
       title: "Sessions",
       quantity: 0,
       submenu: true,
-      active: false
+      active: hasPath('sessions')
     },
 
   ]
-   
+
   return (
-    <div className={`navbar ${props.separated && 'separated'}`}>
+    <div className={`navigationbar ${props.separated && 'separated'}`}>
       <ul>
         {NavItems.map(item => (
-          <li className={`${item.active && 'active'}`}>{item.title} {item.quantity > 0 && <span>{item.quantity}</span>}</li>
+          <li key={item.title} className={`${item.active && 'active'}`}>{item.title} {item.quantity > 0 && <span>{item.quantity}</span>}</li>
         ))}
       </ul>
     </div>

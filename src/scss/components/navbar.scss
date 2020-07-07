@@ -1,4 +1,4 @@
-.navbar {
+.navigationbar {
   transition: all 0.5s linear;
   width: 100%;
 
@@ -25,6 +25,11 @@
       margin: 0px 20px;
       font-size: 18px;
 
+      @media(max-width: 768px) {
+        margin: 0px 10px;
+        font-size: 8px;
+      }
+
       color: #c2cfd5;
 
       cursor: pointer;
@@ -45,6 +50,10 @@
         background-color: #67b0ef;
         
         transition: width 0.15s linear;
+
+        @media (max-width: 768px) {
+          
+        }
       }
 
       &:hover, &.active {
@@ -62,6 +71,12 @@
 
         color: white;
         background-color: #b8c4cc;
+
+        @media(max-width: 768px) {
+          margin-left: 5px;
+          padding: 3px 6px;
+          font-size: 8px;
+        }
       }
     }
   }

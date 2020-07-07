@@ -8,7 +8,6 @@ const CostumerInfo = props => (
         <img alt="Maps" src={ImageMaps} />
       </div>
 
-
       <div className='info'>
         <span className='name'>Zachar Morgany</span>
 

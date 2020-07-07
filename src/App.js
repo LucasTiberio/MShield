@@ -4,6 +4,7 @@ import Routes from './routes';
 import NavigationBar from './Components/NavigationBar';
 import Header from './Components/Header'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/main.scss';
 
 const App = () => {

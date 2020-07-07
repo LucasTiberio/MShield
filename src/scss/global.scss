@@ -8,3 +8,9 @@ body {
   font-family: 'Muli', sans-serif;
   background-color: #f3f4f7;
 }
+
+.table-responsive {
+  @media(max-width: 1024px) {
+    overflow-x: auto;
+  }
+}
